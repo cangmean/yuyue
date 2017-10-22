@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/shelf/shelf",
+    "pages/user/user",
+    "pages/book/info/info",
+    "pages/search/sear",
+    "pages/store/store",
+    "pages/index/index",
+    "pages/book/mulu/mulu",
+    "pages/book/chapter/chapter",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "小白娱阅",
+    "navigationBarTextStyle":"white",
+    "onReachBottomDistance": 15
+  },
+  "tabBar": {
+    "selectedColor": "#1aad16",
+    "list": [{
+      "pagePath": "pages/shelf/shelf",
+      "iconPath": "images/book-o.png",
+      "selectedIconPath": "images/book.png",
+      "text": "书架"
+    },{
+      "pagePath": "pages/store/store",
+      "iconPath": "images/store-o.png",
+      "selectedIconPath": "images/store.png",
+      "text": "书城"
+    },{
+      "pagePath": "pages/search/sear",
+      "iconPath": "images/search-o.png",
+      "selectedIconPath": "images/search.png",
+      "text": "搜索"
+    },{
+      "pagePath": "pages/user/user",
+      "iconPath": "images/user-o.png",
+      "selectedIconPath": "images/user.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
+}

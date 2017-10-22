@@ -1,0 +1,15 @@
+<view class="pn">
+  <view>
+    <view class="book-menu" wx:for="{{ books }}" wx:key="*this">
+      <image src="{{ item.imageUrl }}" class="book-image" bindtap="viewBookInfo" data-book-id="{{ item.id }}"></image>
+      <view class="book-info">
+        <text>{{ item.name }}</text>
+        <text class="book-desc">{{ item.desc }}</text>
+        <view>
+          <span class="icon icon-user"></span>
+          <text class="left-10">{{ item.author }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

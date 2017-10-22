@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="pn">
+  <view class="search-box">
+    <input type="text" bindinput="bindKeyInput" bindconfirm="search" placeholder="查找的书籍..." value="{{ searchBook }}" />
+  </view>
+  <view class="book-list">
+    <view class="book-item" wx:for="{{ books }}" wx:key="*this">
+      <image src="{{ item.imageUrl }}" class="book-image" bindtap="viewBookInfo" data-book-id="{{ item.id }}"></image>
+      <view class="book-info">
+        <text>{{ item.name }}</text>
+        <text class="book-desc">{{ item.desc }}</text>
+        <view>
+          <span class="icon icon-user"></span>
+          <text class="left-10">{{ item.author }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--
+<view class="pn top-10 hot-kw">
+  <text>热门搜索</text>
+</view> -->
+
+<view class="pn top-10 keyword-box">
+  <view class="keyword-head">
+    <text>搜索历史</text>
+    <text class="icon icon-trash" bindtap="delKeywords"></text>
+  </view>
+  <view class="keyword-list">
+      <view wx:for="{{ historyKeyword }}" wx:key="*this">
+        <view bindtap="getBooks" data-book-kw="{{ item }}">{{ item }}</view>
+      </view>
+  </view>
+</view>

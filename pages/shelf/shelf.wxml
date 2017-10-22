@@ -1,0 +1,20 @@
+<!--shelf.wxml-->
+<view>
+  <view class="shelf-op">
+    <view style="opacity:0;">123</view>
+    <view class="box-op">
+      <view bindtap="setHistory" class="left-btn {{ selectBtn == 'his' ? 'active' : ''}}">历史</view>
+      <view bindtap="setFavorite" class="right-btn {{ selectBtn == 'fav' ? 'active' : ''}}">收藏</view>
+    </view>
+    <view class="book-op" bindtap="changeMode" wx:if="{{ mode == false }}">管理</view>
+    <view class="book-op" bindtap="changeMode" wx:else>完成</view>
+  </view>
+
+  <view class="book-list">
+    <view class="book-item" wx:for="{{ books }}" wx:key="*this">
+      <text class="icon icon-bk-remove" bindtap="delBook" wx:if="{{ mode }}" data-book-id="{{ item.id }}"></text>
+      <image src="{{ item.imageUrl}}" class="book-image" bindtap="viewBookInfo" data-book-id="{{ item.id }}"></image>
+      <text>{{ item.name }}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="pn">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    <view class="userinfo-name">
+      <text class="icon address-book">{{userInfo.nickName}}</text>
+      <text>账号: 5527</text>
+    </view>
+  </view>
+</view>
+
+<view class="pn top-10 social-layout">
+  <view class="social-item" bindtap="temp_func">
+    <text>邀请好友</text>
+    <text class="icon icon-right"></text>
+  </view>
+  <view class="social-item" bindtap="temp_func">
+    <text>联系客服</text>
+    <text class="icon icon-right"></text>
+  </view>
+</view>

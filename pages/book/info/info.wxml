@@ -1,0 +1,62 @@
+<view class="pn">
+  <view class="book-layout">
+    <image src="{{ book.imageUrl }}" class="book-image" background-size="cover"></image>
+    <view class="book-info">
+      <view class="book-title">{{ book.name }}</view>
+      <view>
+        <span class="icon icon-user"></span>
+        <text class="left-10">{{ book.author }}</text>
+      </view>
+      <view>分类/{{ book.category }}</view>
+      <view>状态/{{ book.status }}</view>
+    </view>
+  </view>
+  <view class="book-btn-list">
+    <view bindtap="start_read" class="btn">免费试阅</view>
+    <view class="btn btn-disable" wx:if="{{ flag == 'fav' }}">已加书架</view>
+    <view bindtap="set_fav" class="btn" wx:else>加入书架</view>
+  </view>
+</view>
+<!-- 简介区域 -->
+<view class="desc-layout pn">
+  <view class="book-desc">
+      <view class="sort-desc">{{ book.desc }}......</view>
+  </view>
+  <view class="book-mulu" bindtap="toMulu">
+    <text>目录</text>
+    <view>
+      <text>更新于 {{ book.updateTime }}</text>
+      <span class="icon icon-right left-10"></span>
+    </view>
+  </view>
+</view>
+<!-- 书评区域 -->
+<view class="reply-layout pn">
+  <view class="reply-title">
+    <text>书评区</text>
+    <text class="left-10">({{ replyCount }}条评论)</text>
+  </view>
+  <view class="reply-list">
+    <view class="reply-item" wx:for="{{ replies }}" wx:key="*this">
+      <image class="userinfo-avatar" src="{{ item.avatarUrl }}" background-size="cover"></image>
+      <view class="reply-user-info">
+        <text>{{ item.name }}</text>
+        <view>
+          <text class="reply-content">{{ item.content }}</text>
+        </view>
+        <view class="reply-count">
+          <text>{{ item.created }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 输入评论 -->
+<view class="bottom pn">
+  <view class="op-bottom">
+    <view class="op-input">
+      <input value="{{ inputValue }}" bindblur="bindKeyInput" placeholder="评论内容" cursor-spacing='15'/>
+    </view>
+    <view bindtap="addReply">发布</view>
+  </view>
+</view>

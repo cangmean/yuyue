@@ -1,0 +1,51 @@
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+  border: 1px solid #A8A8A8;
+  border-radius: 25px;
+  width: 90%;
+  padding: 4px 10px;
+  margin: 10rpx auto;
+}
+
+.top-10 {
+  margin-top: 20rpx;
+}
+
+.left-10 {
+  margin-left: 20rpx;
+}
+
+.book-menu {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 10rpx;
+}
+
+.book-image {
+  flex-shrink: 0;
+  width: 150rpx;
+  height: 200rpx;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 200rpx;
+  padding: 0 10px;
+}
+
+.book-info > text {
+  word-wrap: break-word;
+  margin-bottom: 5rpx;
+  overflow: hidden;
+}
+
+.book-desc {
+  color: gray;
+}

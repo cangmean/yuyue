@@ -1,0 +1,89 @@
+.order-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*height: 100%;*/
+}
+
+.page-layout {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.order-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #DCDCDC ;
+  padding: 20rpx 20rpx;
+  background-color: white;
+}
+
+.order-box  > wx-view:first-child{
+  line-height: 26px;
+}
+
+.order-op {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #7EC0EE;
+}
+
+.order-op > wx-view {
+    padding: 10rpx 20rpx;
+}
+
+.left-btn {
+  border-left: 1px solid #7EC0EE;
+  border-top: 1px solid #7EC0EE;
+  border-bottom: 1px solid #7EC0EE;
+  border-radius: 4px 0 0 4px;
+}
+
+.right-btn {
+  border-right: 1px solid #7EC0EE;
+  border-top: 1px solid #7EC0EE;
+  border-bottom: 1px solid #7EC0EE;
+  border-radius: 0 4px 4px 0;
+}
+
+.active {
+  background-color: #7EC0EE;
+  color: #fff;
+}
+
+.mulu-layout {
+  padding: 90rpx 0rpx;
+}
+
+.chapter {
+  padding: 20rpx 20rpx;
+  border-bottom: 2rpx solid #DCDCDC ;
+  margin-top: 10rpx;
+  height: 40rpx;
+  overflow-y: auto;
+}
+
+.page-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 2rpx solid #DCDCDC ;
+  padding: 20rpx 20rpx;
+  background-color: white;
+}
+
+.btn {
+  border: 2rpx solid gray;
+  border-radius: 6rpx;
+  padding: 15rpx 30rpx;
+  line-height: 30rpx;
+}
+
+.btn-disable {
+  color: gray;
+}

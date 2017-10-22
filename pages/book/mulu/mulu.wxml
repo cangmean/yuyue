@@ -1,0 +1,34 @@
+<!-- 目录 -->
+
+<view class="pn">
+  <view class="order-layout">
+    <view class="order-box">
+      <view style="color: #EE30A7">{{ bookName }}</view>
+      <view class="order-op">
+        <view bindtap="changeOrderMode" data-mode="order" class="left-btn {{ orderMode == 'order' ? 'active': ''}}">正序</view>
+        <view bindtap="changeOrderMode" data-mode="inverted" class="right-btn {{ orderMode == 'inverted' ? 'active': ''}}">倒序</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mulu-layout">
+    <view wx:for="{{ chapters }}" wx:key="*this">
+      <view class="chapter" bindtap="look" data-chapter-seq="{{ item.seq }}">{{ item.title }}</view>
+    </view>
+  </view>
+
+  <view class="page-layout">
+    <view class="page-box">
+      <view class="btn btn-disable" wx:if="{{ page == 1}}">上一页</view>
+      <view class="btn" bindtap="prevPage" wx:else>上一页</view>
+      <picker bindchange="changePage" value="{{ pageIndex }}" range="{{ pages }}" class="btn">
+        <view class="picker">
+         页面：{{ pages[pageIndex] }}
+         <text class="icon icon-up" style="margin-left: 10rpx;"></text>
+        </view>
+      </picker>
+      <view class="btn btn-disable" wx:if="{{ page == lastPage }}">下一页</view>
+      <view class="btn" bindtap="nextPage" wx:else>下一页</view>
+    </view>
+  </view>
+</view>

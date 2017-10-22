@@ -1,0 +1,21 @@
+<!-- 内容 -->
+<view class="{{ mode == 'day' ? 'pn': 'pn-night'}}">
+  <view class="op-top">
+    <view class="icon {{ mode == 'day' ? 'icon-home': 'icon-home-w'}}" bindtap="toShelf"></view>
+    <view class="icon {{ mode == 'day' ? 'icon-night': 'icon-day'}}" bindtap="changeReadMode"></view>
+    <view bindtap="changeToSmall">A-</view>
+    <view bindtap="changeToLarge">A+</view>
+  </view>
+
+  <view class="title">{{ chapter.title }}</view>
+  <view class="content ft-{{ftSize}}" wx:for="{{ chapter.contentList }}" wx:key="*this">
+    <view>{{ item }}</view>
+  </view>
+  <view class="op-bottom">
+    <view wx:if="{{ seq == firstSeq }}" class="btn-disable">上一章</view>
+    <view bindtap="prevChapter" wx:else>上一章</view>
+    <view bindtap="toMulu">目录</view>
+    <view wx:if="{{ seq == lastSeq }}" class="btn-disable">下一章</view>
+    <view bindtap="nextChapter" wx:else>下一章</view>
+  </view>
+</view>

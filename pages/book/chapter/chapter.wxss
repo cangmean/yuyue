@@ -1,0 +1,77 @@
+.pn {
+  background-color: #F0FFF0;
+  font-size: 28rpx;
+}
+
+.pn-night {
+  background-color: black;
+  font-size: 28rpx;
+  color: white;
+}
+
+.ft-sm {
+  font-size: 28rpx;
+  line-height: 36rpx;
+}
+
+.ft-md {
+  font-size: 34rpx;
+  line-height: 42rpx;
+}
+
+.ft-lg {
+  font-size: 40rpx;
+  line-height: 48rpx;
+}
+
+
+.op-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20rpx;
+}
+
+.op-top > wx-view {
+  margin: 0 10rpx;
+  padding: 10rpx 20rpx;
+  width: 40rpx;
+  heigth: 10rpx;
+  border: 2rpx solid gray;
+  text-align: center;
+  border-radius: 6rpx;
+}
+
+.btn-disable {
+  color: gray;
+}
+
+.op-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 30rpx;
+}
+
+.op-bottom > wx-view {
+  margin: 0 10rpx;
+  padding: 10rpx 20rpx;
+  width: 80rpx;
+  heigth: 20rpx;
+  border: 2rpx solid gray;
+  text-align: center;
+  border-radius: 6rpx;
+}
+
+.title {
+  text-align: center;
+  padding-top: 10rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.content {
+  padding: 10rpx 20rpx;
+  letter-spacing: 4rpx;
+  /*line-height: 36rpx;*/
+}
